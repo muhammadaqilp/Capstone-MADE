@@ -1,7 +1,6 @@
 plugins {
-    id 'com.android.application'
+    id 'com.android.dynamic-feature'
     id 'kotlin-android'
-    id 'kotlin-parcelize'
     id 'kotlin-kapt'
 }
 
@@ -11,7 +10,7 @@ android {
     compileSdk 32
 
     defaultConfig {
-        applicationId "com.example.capstone_made"
+        applicationId "com.example.favorite"
         minSdk 21
         targetSdk 32
         versionCode 1
@@ -30,15 +29,12 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-    kotlinOptions {
-        jvmTarget = '1.8'
-    }
     buildFeatures {
         viewBinding true
     }
-    dynamicFeatures = [':favorite']
 }
 
 dependencies {
-    implementation project(":core")
+    implementation project(":app")
+    implementation project(":favorite")
 }
