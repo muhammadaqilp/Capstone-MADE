@@ -8,6 +8,7 @@ buildscript {
         classpath "com.android.tools.build:gradle:7.0.4"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.10"
         classpath "org.jacoco:org.jacoco.core:0.8.7"
+        classpath "com.android.tools.build:bundletool:1.9.0"
     }
     ext {
         appcompat_version = "1.4.1"

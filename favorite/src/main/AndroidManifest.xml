@@ -10,5 +10,6 @@
         </dist:delivery>
 
         <dist:fusing dist:include="true" />
+        <dist:removable dist:value="false" />
     </dist:module>
 </manifest>
