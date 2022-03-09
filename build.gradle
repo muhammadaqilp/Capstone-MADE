@@ -35,6 +35,13 @@ buildscript {
         koin_version = "3.1.5"
 
         viewbinding_version = "1.5.3"
+
+        sqlcipher_version = "4.4.0"
+        sqlite_ktx_version = "2.2.0"
+
+        lottie_version = "4.1.0"
+
+        shimmer_version = "0.5.0"
     }
 }
 
