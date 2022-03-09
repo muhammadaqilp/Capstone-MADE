@@ -7,6 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import by.kirich1409.viewbindingdelegate.CreateMethod
+import by.kirich1409.viewbindingdelegate.viewBinding
 import com.example.capstone_made.detail.DetailGamesActivity
 import com.example.core.ui.GamesAdapter
 import com.example.favorite.databinding.FragmentFavoriteBinding
@@ -17,15 +19,13 @@ class FavoriteFragment : Fragment(), GamesAdapter.OnItemClickCallback {
 
     private val favoriteViewModel: FavoriteViewModel by viewModel()
 
-    private var _binding: FragmentFavoriteBinding? = null
-    private val binding get() = _binding!!
+    private val binding: FragmentFavoriteBinding by viewBinding(CreateMethod.INFLATE)
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         // Inflate the layout for this fragment
-        _binding = FragmentFavoriteBinding.inflate(inflater, container, false)
         loadKoinModules(favoriteModule)
         return binding.root
     }
@@ -48,11 +48,6 @@ class FavoriteFragment : Fragment(), GamesAdapter.OnItemClickCallback {
                 adapter = gamesAdapter
             }
         }
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
     }
 
     override fun onItemClicked(id: Int?) {

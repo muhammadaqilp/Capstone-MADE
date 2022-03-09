@@ -8,6 +8,8 @@ import android.view.ViewGroup
 import android.widget.SearchView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import by.kirich1409.viewbindingdelegate.CreateMethod
+import by.kirich1409.viewbindingdelegate.viewBinding
 import com.example.capstone_made.R
 import com.example.capstone_made.databinding.FragmentSearchBinding
 import com.example.capstone_made.detail.DetailGamesActivity
@@ -19,15 +21,13 @@ class SearchFragment : Fragment(), GamesAdapter.OnItemClickCallback {
 
     private val searchViewModel: SearchViewModel by viewModel()
 
-    private var _binding: FragmentSearchBinding? = null
-    private val binding get() = _binding!!
+    private val binding: FragmentSearchBinding by viewBinding(CreateMethod.INFLATE)
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         // Inflate the layout for this fragment
-        _binding = FragmentSearchBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -79,11 +79,6 @@ class SearchFragment : Fragment(), GamesAdapter.OnItemClickCallback {
 
     private fun loading(status: Boolean) {
         binding.progressBar.visibility = if (status) View.VISIBLE else View.GONE
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
     }
 
     override fun onItemClicked(id: Int?) {

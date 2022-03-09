@@ -24,4 +24,7 @@ dependencies {
     //koin
     implementation "io.insert-koin:koin-core:$koin_version"
     implementation "io.insert-koin:koin-android:$koin_version"
+
+    //view binding
+    implementation "com.github.kirich1409:viewbindingpropertydelegate:$viewbinding_version"
 }
