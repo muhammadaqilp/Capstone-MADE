@@ -1,9 +1,9 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Capstone-MADE</string>
     <string name="title_favorite">Favorite</string>
 
     <string name="games">Games</string>
-    <string name="search">Search</string>
+    <string name="search" tools:ignore="DuplicateStrings">Search</string>
     <string name="games_detail">Games Detail</string>
     <string name="rating">%s / 5</string>
     <string name="about_game">About Game</string>
