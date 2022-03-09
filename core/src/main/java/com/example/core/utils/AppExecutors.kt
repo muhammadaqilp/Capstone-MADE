@@ -1,3 +1,5 @@
+@file:Suppress("unused")
+
 package com.example.core.utils
 
 import android.os.Handler

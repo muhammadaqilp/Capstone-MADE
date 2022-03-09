@@ -8,7 +8,6 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.lifecycleScope
-import by.kirich1409.viewbindingdelegate.CreateMethod
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.bumptech.glide.Glide
 import com.example.capstone_made.R
@@ -18,17 +17,16 @@ import com.example.core.domain.model.Games
 import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class DetailGamesActivity : AppCompatActivity() {
+class DetailGamesActivity : AppCompatActivity(R.layout.activity_detail_games) {
 
     private val detailGamesViewModel: DetailGamesViewModel by viewModel()
-    private val binding: ActivityDetailGamesBinding by viewBinding(CreateMethod.INFLATE)
+    private val binding by viewBinding(ActivityDetailGamesBinding::bind)
 
     private var stateFav = false
     private var title: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(binding.root)
 
         binding.ivBack.setOnClickListener { onBackPressed() }
 

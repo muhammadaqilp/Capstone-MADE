@@ -5,14 +5,13 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
-import by.kirich1409.viewbindingdelegate.CreateMethod
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.example.capstone_made.databinding.ActivityMainBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
-    private val binding: ActivityMainBinding by viewBinding(CreateMethod.INFLATE)
+    private val binding by viewBinding(ActivityMainBinding::bind)
     private lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {

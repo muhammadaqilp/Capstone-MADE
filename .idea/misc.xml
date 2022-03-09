@@ -3,16 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/AndroidStudioProjects/CapstoneMADE/app/src/main/res/layout/activity_detail_games.xml" value="0.14666666666666667" />
-        <entry key="..\:/AndroidStudioProjects/CapstoneMADE/app/src/main/res/layout/activity_main.xml" value="0.17552083333333332" />
-        <entry key="..\:/AndroidStudioProjects/CapstoneMADE/app/src/main/res/layout/fragment_home.xml" value="0.1" />
-        <entry key="..\:/AndroidStudioProjects/CapstoneMADE/app/src/main/res/layout/fragment_search.xml" value="0.17552083333333332" />
-        <entry key="..\:/AndroidStudioProjects/CapstoneMADE/app/src/main/res/layout/item_games.xml" value="0.12291666666666666" />
-        <entry key="..\:/AndroidStudioProjects/CapstoneMADE/app/src/main/res/layout/view_error.xml" value="0.17552083333333332" />
-        <entry key="..\:/AndroidStudioProjects/CapstoneMADE/app/src/main/res/menu/bottom_nav_menu.xml" value="0.4223057644110276" />
-        <entry key="..\:/AndroidStudioProjects/CapstoneMADE/core/src/main/res/drawable/ic_star.xml" value="0.13796296296296295" />
-        <entry key="..\:/AndroidStudioProjects/CapstoneMADE/core/src/main/res/layout/item_games.xml" value="0.2935064935064935" />
-        <entry key="..\:/AndroidStudioProjects/CapstoneMADE/favorite/src/main/res/layout/fragment_favorite.xml" value="0.17552083333333332" />
+        <entry key="..\:/AndroidStudioProjects/CapstoneMADE/app/src/main/res/layout/activity_detail_games.xml" value="0.17552083333333332" />
+        <entry key="..\:/AndroidStudioProjects/CapstoneMADE/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/CapstoneMADE/app/src/main/res/layout/fragment_home.xml" value="0.16666666666666666" />
+        <entry key="..\:/AndroidStudioProjects/CapstoneMADE/app/src/main/res/layout/fragment_search.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/CapstoneMADE/app/src/main/res/layout/view_empty.xml" value="0.17552083333333332" />
+        <entry key="..\:/AndroidStudioProjects/CapstoneMADE/core/src/main/res/layout/item_games.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/CapstoneMADE/core/src/main/res/layout/item_games_loading.xml" value="0.16666666666666666" />
+        <entry key="..\:/AndroidStudioProjects/CapstoneMADE/favorite/src/main/res/layout/fragment_favorite.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/CapstoneMADE/favorite/src/main/res/layout/view_empty.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/CapstoneMADE/favorite/src/main/res/layout/view_error.xml" value="0.1" />
       </map>
     </option>
   </component>

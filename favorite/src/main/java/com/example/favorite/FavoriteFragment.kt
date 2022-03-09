@@ -39,6 +39,7 @@ class FavoriteFragment : Fragment(), GamesAdapter.OnItemClickCallback {
             favoriteViewModel.favorites.observe(viewLifecycleOwner, { games ->
                 if (games != null) {
                     gamesAdapter.setData(games)
+                    binding.viewEmpty.visibility = if (games.isEmpty()) View.VISIBLE else View.GONE
                 }
             })
 

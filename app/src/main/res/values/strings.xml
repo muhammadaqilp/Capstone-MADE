@@ -13,4 +13,5 @@
     <string name="share_text">Segera Download Game %s di Platform Game Kesayangan Kalian!</string>
     <string name="something_wrong">Oopss.. Sorry, something went wrong..</string>
     <string name="search_hint">Search Games Here..</string>
+    <string name="no_data">Oopss.. No Data</string>
 </resources>
