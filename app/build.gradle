@@ -3,7 +3,6 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-parcelize'
     id 'kotlin-kapt'
-    id 'jacoco'
 }
 
 apply from: '../shared_dependencies.gradle'
