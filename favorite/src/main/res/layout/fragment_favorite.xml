@@ -2,7 +2,6 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/layoutRoot"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".FavoriteFragment">
@@ -28,7 +27,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_welcome"
         tools:itemCount="10"
-        tools:listitem="@layout/item_games" />
+        tools:listitem="@layout/item_games"
+        tools:ignore="UnusedIds" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/view_empty"
@@ -38,7 +38,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="UnusedIds">
 
         <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/lottie"
