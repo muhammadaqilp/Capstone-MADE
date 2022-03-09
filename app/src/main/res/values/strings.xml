@@ -1,4 +1,16 @@
 <resources>
     <string name="app_name">Capstone-MADE</string>
     <string name="title_favorite">Favorite</string>
+
+    <string name="games">Games</string>
+    <string name="search">Search</string>
+    <string name="games_detail">Games Detail</string>
+    <string name="rating">%s / 5</string>
+    <string name="about_game">About Game</string>
+    <string name="text_hi">Hi,</string>
+    <string name="text_welcome">Welcome to Game Catalogue App</string>
+    <string name="text_search">Search Your Favorite Game Here!</string>
+    <string name="share_text">Segera Download Game %s di Platform Game Kesayangan Kalian!</string>
+    <string name="something_wrong">Oopss.. Sorry, something went wrong..</string>
+    <string name="search_hint">Search Games Here..</string>
 </resources>
