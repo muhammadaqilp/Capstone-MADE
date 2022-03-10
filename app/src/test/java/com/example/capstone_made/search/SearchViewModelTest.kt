@@ -1,4 +1,4 @@
-package com.example.capstone_made.home
+package com.example.capstone_made.search
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.lifecycle.Observer
@@ -6,15 +6,16 @@ import com.example.core.data.Resource
 import com.example.core.domain.model.Games
 import com.example.core.domain.usecase.GamesUseCase
 import com.example.core.utils.DataDummy
+import com.nhaarman.mockitokotlin2.atLeastOnce
 import com.nhaarman.mockitokotlin2.verify
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
-import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.test.StandardTestDispatcher
 import kotlinx.coroutines.test.resetMain
+import kotlinx.coroutines.test.runTest
 import kotlinx.coroutines.test.setMain
 import org.junit.After
 import org.junit.Before
@@ -28,10 +29,10 @@ import org.mockito.Mockito.`when`
 import org.mockito.junit.MockitoJUnitRunner
 
 @ExperimentalCoroutinesApi
-@RunWith(MockitoJUnitRunner.Silent::class)
-class HomeViewModelTest {
+@RunWith(MockitoJUnitRunner::class)
+class SearchViewModelTest {
 
-    private lateinit var homeViewModel: HomeViewModel
+    private lateinit var searchViewModel: SearchViewModel
 
     @Mock
     private lateinit var gamesUseCase: GamesUseCase
@@ -46,8 +47,14 @@ class HomeViewModelTest {
 
     @Before
     fun setUp() {
-        homeViewModel = HomeViewModel(gamesUseCase)
         Dispatchers.setMain(StandardTestDispatcher())
+        flow = flow {
+            emit(Resource.Loading(listOf()))
+            delay(10)
+            emit(Resource.Success(DataDummy.generateGameList().toList()))
+        }
+        `when`(gamesUseCase.getResultSearchGames("FIFA")).thenReturn(flow)
+        searchViewModel = SearchViewModel(gamesUseCase)
     }
 
     @After
@@ -56,16 +63,10 @@ class HomeViewModelTest {
     }
 
     @Test
-    fun `get list games`(): Unit = runBlocking {
-        flow = flow {
-            emit(Resource.Loading(listOf()))
-            delay(10)
-            emit(Resource.Success(DataDummy.generateGameList().toList()))
-        }
-        `when`(gamesUseCase.getAllGames()).thenReturn(flow)
+    fun `get result from search`() = runTest {
+        searchViewModel.searchGames("FIFA").observeForever(observer)
+        verify(gamesUseCase, atLeastOnce()).getResultSearchGames("FIFA")
 
-        homeViewModel.getListGames().observeForever(observer)
-        verify(gamesUseCase).getAllGames()
     }
 
 }
