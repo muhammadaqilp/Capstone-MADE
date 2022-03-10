@@ -37,7 +37,7 @@ class HomeFragment : Fragment(), GamesAdapter.OnItemClickCallback {
         if (activity != null) {
             val gamesAdapter = GamesAdapter(this)
 
-            homeViewModel.games.observe(viewLifecycleOwner, { games ->
+            homeViewModel.getListGames().observe(viewLifecycleOwner, { games ->
                 if (games != null) {
                     when (games) {
                         is Resource.Loading -> loading(true)
