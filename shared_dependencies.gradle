@@ -36,4 +36,7 @@ dependencies {
     testImplementation "androidx.arch.core:core-testing:$androidCoreTestVersion"
     testImplementation "com.nhaarman.mockitokotlin2:mockito-kotlin:$mockitoKotlinVersion"
     testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutine_test_version"
+
+    //leaky app
+    debugImplementation "com.squareup.leakcanary:leakcanary-android:$leakyAppVersion"
 }
